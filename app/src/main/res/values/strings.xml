@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NewsTestApp</string>
+
+    <string name="no_network_connection">Отсутствует подключение к сети</string>
+
+    <string name="unknown_error_message">Произошла неизвестная ошибка</string>
+
+    <string name="server_issues">Неполадки в работе сервера</string>
+    
+    <string name="error">Ошибка</string>
+
+    <string name="ok">Ок</string>
+
+</resources>

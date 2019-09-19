@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NewsTestApp</string>
+
+    <string name="no_network_connection">No network connection</string>
+
+    <string name="unknown_error_message">An unknown error has occurred</string>
+
+    <string name="server_issues">Server issues</string>
+
+    <string name="error">Error</string>
+
+    <string name="ok">Ok</string>
+
+</resources>
