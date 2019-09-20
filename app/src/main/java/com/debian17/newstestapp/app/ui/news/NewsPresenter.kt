@@ -3,13 +3,13 @@ package com.debian17.newstestapp.app.ui.news
 import androidx.lifecycle.Observer
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import com.arellomobile.mvp.InjectViewState
 import com.debian17.newstestapp.app.base.mvp.BasePresenter
 import com.debian17.newstestapp.app.base.observeOnUI
 import com.debian17.newstestapp.app.source.NewsDataSource
 import com.debian17.newstestapp.app.ui.news.source.NewsSourceFactory
 import com.debian17.newstestapp.data.model.Article
 import io.reactivex.subjects.PublishSubject
+import moxy.InjectViewState
 import java.util.concurrent.Executors
 
 @InjectViewState

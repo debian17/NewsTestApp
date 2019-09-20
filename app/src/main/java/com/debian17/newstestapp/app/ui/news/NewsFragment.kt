@@ -9,8 +9,6 @@ import androidx.core.content.ContextCompat
 import androidx.paging.PagedList
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.arellomobile.mvp.presenter.InjectPresenter
-import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.debian17.newstestapp.R
 import com.debian17.newstestapp.app.App
 import com.debian17.newstestapp.app.base.error.NewsErrorHandler
@@ -23,6 +21,8 @@ import com.debian17.newstestapp.app.ui.news.adapter.NewsDiffCallback
 import com.debian17.newstestapp.data.model.Article
 import kotlinx.android.synthetic.main.fragment_news.*
 import com.debian17.newstestapp.app.base.openBrowser
+import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 
 
 class NewsFragment : BaseFragment(), NewsView {

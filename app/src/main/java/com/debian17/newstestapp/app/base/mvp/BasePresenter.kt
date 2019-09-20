@@ -1,9 +1,9 @@
 package com.debian17.newstestapp.app.base.mvp
 
 import androidx.annotation.CallSuper
-import com.arellomobile.mvp.MvpPresenter
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import moxy.MvpPresenter
 
 abstract class BasePresenter<T : BaseView> : MvpPresenter<T>() {
 
