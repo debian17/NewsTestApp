@@ -23,6 +23,8 @@ import kotlinx.android.synthetic.main.fragment_news.*
 import com.debian17.newstestapp.app.base.openBrowser
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
+import javax.inject.Inject
+import javax.inject.Provider
 
 
 class NewsFragment : BaseFragment(), NewsView {
@@ -39,16 +41,23 @@ class NewsFragment : BaseFragment(), NewsView {
     @InjectPresenter
     lateinit var presenter: NewsPresenter
 
+    @Inject
+    lateinit var presenterProvider: Provider<NewsPresenter>
+
     @ProvidePresenter
     fun providePresenter(): NewsPresenter {
-        val dataComponent = (activity!!.application as App).provideDataComponent()
-        return NewsPresenter(dataComponent.provideNewsRepository())
+        return presenterProvider.get()
     }
 
     private val urlClickListener = object : NewsAdapter.UrlClickListener {
         override fun onUrlCLick(url: String) {
             context?.openBrowser(url)
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        inject()
+        super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
@@ -104,6 +113,10 @@ class NewsFragment : BaseFragment(), NewsView {
 
     override fun hidePagination() {
         adapter.hidePagination()
+    }
+
+    private fun inject() {
+        App.appComponent.inject(this)
     }
 
 }
